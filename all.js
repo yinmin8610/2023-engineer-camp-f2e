@@ -117,7 +117,7 @@ function renderWorks() {
     </li>`
   });
 
-  list.innerHTML= works;
+  list.innerHTML = works;
 }
 
 // 切換分頁
@@ -132,10 +132,10 @@ function changePage(pagesData) {
       pageId = e.target.dataset.page;
       data.page = Number(pageId);
 
-      if(!pageId) {
-        data.page =  Number(pagesData.current_page) + 1
+      if (!pageId) {
+        data.page = Number(pagesData.current_page) + 1
       }
-       
+
       getData(data);
     });
   });
@@ -190,7 +190,11 @@ asc.addEventListener('click', (e) => {
 const filterBtns = document.querySelectorAll('#filter-btn')
 filterBtns.forEach((item) => {
   item.addEventListener('click', () => {
-    data.type = item.textContent;
+    if (item.textContent === '全部') {
+      data.type = '';
+    } else {
+      data.type = item.textContent;
+    }
     getData(data)
   })
 })
