@@ -92,7 +92,7 @@ function renderWorks() {
   let works = '';
 
   worksData.forEach((item) => {
-    works += /*html*/`<li class="col-4 h-100">
+    works += /*html*/`<li class="col-4">
       <div class="card">
         <div class="card-layer">
           <img class="card-img" src="${item.imageUrl}" alt="ai image">
