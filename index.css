@@ -284,6 +284,7 @@ input:focus-visible {
   display: flex;
   flex-wrap: wrap;
 }
+
 .flex-column {
   flex-direction: column;
 }
@@ -605,7 +606,7 @@ input:focus-visible {
 
 .border-body {
   padding: 20px 32px 140px 32px;
-  flex-grow:1;
+  flex-grow: 1;
 }
 
 .border-footer {
@@ -794,13 +795,24 @@ input:focus-visible {
   }
 }
 
+.price {
+  position: relative;
+}
 
+.price-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
 
 
 /* swiper */
 .swiper {
   width: 100%;
-  height: 100%;
+}
+
+.swiper-slide {
+  height: auto;
 }
 
 .swiper-wrapper {
